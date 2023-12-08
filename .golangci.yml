@@ -1,0 +1,46 @@
+modules-download-mode: mod
+linters-settings:
+  govet:
+    check-shadowing: true
+  golint:
+    min-confidence: 0
+  gocyclo:
+    min-complexity: 25
+  maligned:
+    suggest-new: true
+  dupl:
+    threshold: 200
+  goconst:
+    min-len: 2
+    min-occurrences: 2
+
+run:
+  skip-dirs:
+    - hack
+    - build
+    - dist
+    - proto
+    - testdata
+linters:
+  enable:
+    - revive
+    - gocritic
+    - stylecheck
+    - goimports
+    - gosec
+    - unconvert
+    - nakedret
+    - unparam
+    - dupl
+    - misspell
+    - exportloopref
+    - prealloc
+    - bodyclose
+    - goconst
+  disable:
+    - lll
+    - gochecknoinits
+    - gochecknoglobals
+
+issues:
+  exclude-rules: []
