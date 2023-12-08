@@ -1,3 +1,6 @@
 go 1.21.2
 
-use ./day1
+use (
+	./day1
+	./day1pt2
+)
